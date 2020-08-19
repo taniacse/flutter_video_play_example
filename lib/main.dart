@@ -10,7 +10,7 @@ class VideoPlayerApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Video Player Demo',
-      home: SamplePlayerWithFlick(),
+      home: VideoPlayerNormal(),
     );
   }
 }
@@ -132,7 +132,7 @@ class _SamplePlayerState extends State<SamplePlayerWithFlick> {
     super.initState();
     flickManager = FlickManager(
       videoPlayerController:
-      VideoPlayerController.network(office_url),
+      VideoPlayerController.network('https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4'),
     );
   }
 
